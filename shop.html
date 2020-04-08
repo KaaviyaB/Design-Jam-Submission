@@ -1,0 +1,224 @@
+<html>
+<head>
+  <title>Jolly Coffee</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Open+Sans+Condensed&family=Quicksand:wght@300&family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Acme&family=Lobster&family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/yourcode.js"></script>
+  <style>
+  * {box-sizing: border-box;}
+  .mySlides {display:none;}
+  body {margin:0;}
+  .bg
+  {
+    width: 100%;
+    z-index: 0;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+  }
+  .sea {
+    float: right;
+  }
+  li {
+    float: left;
+  }
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    padding-bottom: 0px;
+    text-decoration: none;
+  }
+  .company_desc {
+    position: relative;
+    text-align: center;
+    font-size: 35px;
+    font-family: 'Roboto', sans-serif;
+  }
+  .company_desc_2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 19px;
+    position: relative;
+    text-align: center;
+  }
+  .subheading {
+    font-family: 'Comfortaa', cursive;
+    font-size: 22px;
+    text-align: left;
+    margin-left: 10px;
+  }
+  .row {
+    display: flex;
+  }
+
+  .column {
+    flex: 25%;
+    padding: 10px;
+    height: 410px;
+  }
+  .desc_text {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 17px;
+  }
+  .navbar {
+    margin-bottom: 0px !important;
+    border: 0px !important;
+  }
+  .navbar a {
+    float: left;
+    text-align: center;
+    padding: 12px;
+    padding-bottom:0px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  .navbar input[type=text] {
+    float: right;
+    padding: 5px;
+    border: none;
+    margin-top: 8px;
+    margin-bottom: 5px;
+    margin-right: 16px;
+    font-size: 15px;
+    background-color: #404040;
+    text-decoration-color: white;
+  }
+  ::placeholder {
+    color: white;
+  }
+  #company {
+    font-size: 25px;
+    font-family: 'Dancing Script', cursive;
+    float:left;
+    text-decoration-color: white;
+    color:white;
+    padding:5px;
+  }
+  hr {
+    border-color: black;
+    align-content: center;
+    width: 150px;
+  }
+  </style>
+</head>
+<body background="wallpaper.png" style="background-size:cover;">
+<div class="navbar">
+    <ul>
+      <li><a href="map1.html"><i class="fa fa-map-marker" style="float:left"></i></a><li>
+      <li id="company">Jolly Coffee</li>
+      <li class="sea"><input type="text" class="searchTerm" placeholder="Search here.." style="color:white;"></li>
+      <li class="sea"><a href="#"><i class="fa fa-search"></i></a></li>
+      <li class="sea"><a href="shop.html"><i class="fa fa-shopping-cart"></i></a></li>
+      <li class="sea"><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i></i></a></li>
+    </ul>
+</div>
+
+<p class="subheading" style="text-align:center;padding-top:25px;font-size:30px;"><i><b>Jolly Coffee</b></i> -<b>MART</b></p><hr><br>
+<p class="company_desc_2">Add to your cart the <i><b>Jolly Coffee</b></i> items that you wish to purchase from below</p><br>
+<p class="subheading" style="margin-left:25px;">COFFEE BEANS :</p><br>
+<div class="row" style="margin-left:15px;">
+  <div class="column">
+    <img src="bean-1.png" width="280px" height="280px"/><p class="desc_text" style="margin-left:10px;margin-top:10px;">
+      <i>Jolly Coffee</i> Premium Coffee Beans<br>
+      <p style="padding-left:50px;font-family: 'Quicksand', sans-serif;">
+        <div class="row" style="margin-left:50px;"><strike>Rs. 1500</strike> Rs.1399 per kg</p>
+        <button type="button" class="btn btn-secondary" style="margin-left:10px;background-color:#b3b3b3;font-family:Calibri;font-size:15px;">Add</button>
+        </div>
+      </p>
+    </div>
+    <div class="column">
+      <img src="bean-2.png" width="280px" height="280px"/><p class="desc_text" style="margin-left:10px;margin-top:10px;">
+        <i>Jolly Coffee</i> Elite Coffee Beans<br>
+        <p style="padding-left:50px;font-family: 'Quicksand', sans-serif;">
+          <div class="row" style="margin-left:50px;"><strike>Rs. 1400</strike> Rs.1299 per kg</p>
+          <button type="button" class="btn btn-secondary" style="margin-left:10px;background-color:#b3b3b3;font-family:Calibri;font-size:15px;">Add</button>
+          </div>
+        </p>
+      </div>
+      <div class="column">
+        <img src="bean-3.png" width="280px" height="280px"/><p class="desc_text" style="margin-left:10px;margin-top:10px;">
+          <i>Jolly Coffee</i> Organic Coffee Beans<br>
+          <p style="padding-left:50px;font-family: 'Quicksand', sans-serif;">
+            <div class="row" style="margin-left:50px;"><strike>Rs. 1200</strike> Rs.1099 per kg</p>
+            <button type="button" class="btn btn-secondary" style="margin-left:10px;background-color:#b3b3b3;font-family:Calibri;font-size:15px;">Add</button>
+            </div>
+          </p>
+        </div>
+        <div class="column">
+          <img src="bean-2.png" width="280px" height="280px"/><p class="desc_text" style="margin-left:10px;margin-top:10px;">
+            <i>Jolly Coffee</i> Black Coffee Beans<br>
+            <p style="padding-left:50px;font-family: 'Quicksand', sans-serif;">
+              <div class="row" style="margin-left:50px;"><strike>Rs. 800</strike> Rs.599 per kg</p>
+              <button type="button" class="btn btn-secondary" style="margin-left:10px;background-color:#b3b3b3;font-family:Calibri;font-size:15px;">Add</button>
+              </div>
+            </p>
+          </div>
+</div>
+
+<p class="subheading" style="margin-left:25px;">COFFEE TYPES :</p><br>
+<div class="row" style="margin-left:15px;">
+  <div class="column">
+    <img src="co-1.png" width="280px" height="280px"/><p class="desc_text" style="margin-left:70px;margin-top:10px;">
+      Cafe Latte<br>
+      <p style="padding-left:50px;font-family: 'Quicksand', sans-serif;">
+        <div class="row"  style="margin-left:50px;"><strike>Rs. 125</strike> Rs.99 per cup</p>
+        <button type="button" class="btn btn-secondary" style="margin-left:10px;background-color:#b3b3b3;font-family:Calibri;font-size:15px;">Add</button>
+        </div>
+      </p>
+    </div>
+    <div class="column">
+      <img src="co-2.png" width="280px" height="280px"/><p class="desc_text" style="margin-left:70px;margin-top:10px;">
+        Cappuccino<br>
+        <p style="padding-left:50px;font-family: 'Quicksand', sans-serif;">
+          <div class="row"  style="margin-left:50px;"><strike>Rs. 150</strike> Rs.129 per cup</p>
+          <button type="button" class="btn btn-secondary" style="margin-left:10px;background-color:#b3b3b3;font-family:Calibri;font-size:15px;">Add</button>
+          </div>
+        </p>
+      </div>
+      <div class="column">
+        <img src="co-3.png" width="280px" height="280px"/><p class="desc_text" style="margin-left:70px;margin-top:10px;">
+          Espresso<br>
+          <p style="padding-left:50px;font-family: 'Quicksand', sans-serif;">
+            <div class="row"  style="margin-left:50px;"><strike>Rs. 180</strike> Rs.169 per cup</p>
+            <button type="button" class="btn btn-secondary" style="margin-left:10px;background-color:#b3b3b3;font-family:Calibri;font-size:15px;">Add</button>
+            </div>
+          </p>
+        </div>
+        <div class="column">
+          <img src="co-4.png" width="280px" height="280px"/><p class="desc_text" style="margin-left:70px;margin-top:10px;">
+            Mochaccino<br>
+            <p style="padding-left:50px;font-family: 'Quicksand', sans-serif;margin-left:50px;">
+              <div class="row" style="margin-left:50px;"><strike>Rs. 220</strike> Rs.199 per cup</p>
+              <button type="button" class="btn btn-secondary" style="margin-left:10px;background-color:#b3b3b3;font-family:Calibri;font-size:15px;">Add</button>
+              </div>
+            </p>
+          </div>
+</div>
+<br><br><br><hr width="300px" style="color:black;">
+<div class="company_desc_2" style="background-color:#cccccc;padding-top:20px">Follow <i><b>Jolly Coffee</b></i> on our social media to receive all updates<br><br>
+  <div>
+    <a href="https://www.facebook.com/jollybreakfast/" target='_blank'><i class="fa fa-facebook" aria-hidden="true" style="padding-right:25px;" title="Facebook"></i></a>
+    <a href="https://www.instagram.com/jollybreakfast/" target='_blank'><i class="fa fa-instagram" aria-hidden="true" style="padding-right:25px;" title="Instagram"></i></a>
+    <a href="https://twitter.com/jollybeancafe?lang=en" target='_blank'><i class="fa fa-twitter" aria-hidden="true" title="Twitter"></i></a><br><br>
+  </div>
+</div>
+</body>
+</html>

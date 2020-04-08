@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <title>Google Maps Multiple Markers</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+  <script src="http://maps.google.com/maps/api/js?sensor=false"type="text/javascript"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  * {box-sizing: border-box;}
+  .mySlides {display:none;}
+  body {margin:0;}
+  .bg
+  {
+    width: 100%;
+    z-index: 0;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+  }
+  .sea {
+    float: right;
+  }
+  li {
+    float: left;
+  }
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    padding-bottom: 0px;
+    text-decoration: none;
+  }
+  .subheading {
+    font-family: 'Comfortaa', cursive;
+    font-size: 22px;
+    text-align: left;
+    margin-left: 10px;
+  }
+  .row {
+    display: flex;
+  }
+
+  .column {
+    flex: 25%;
+    padding: 10px;
+    height: 410px;
+  }
+  .desc_text {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 17px;
+  }
+  .navbar {
+    margin-bottom: 0px !important;
+    border: 0px !important;
+  }
+  .navbar a {
+    float: left;
+    text-align: center;
+    padding: 12px;
+    padding-bottom:0px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  .navbar input[type=text] {
+    float: right;
+    padding: 5px;
+    border: none;
+    margin-top: 8px;
+    margin-bottom: 5px;
+    margin-right: 16px;
+    font-size: 15px;
+    background-color: #404040;
+    text-decoration-color: white;
+  }
+  ::placeholder {
+    color: white;
+  }
+  #company {
+    font-size: 25px;
+    font-family: 'Dancing Script', cursive;
+    float:left;
+    text-decoration-color: white;
+    color:white;
+    padding:5px;
+  }
+  .company_desc {
+    position: relative;
+    text-align: center;
+    font-size: 35px;
+    font-family: 'Roboto', sans-serif;
+  }
+  .company_desc_2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 19px;
+    position: relative;
+    text-align: center;
+  }
+  #company {
+    font-size: 25px;
+    font-family: 'Dancing Script', cursive;
+    float:left;
+    text-decoration-color: white;
+    color:white;
+    padding:5px;
+  }
+  </style>
+</head>
+<body background="wallpaper.png" style="background-size:cover;">
+  <div class="navbar">
+      <ul>
+        <li><a href="map1.html"><i class="fa fa-map-marker" style="float:left"></i></a><li>
+        <li id="company">Jolly Coffee</li>
+        <li class="sea"><input type="text" class="searchTerm" placeholder="Search here.." style="color:white;"></li>
+        <li class="sea"><a href="#"><i class="fa fa-search"></i></a></li>
+        <li class="sea"><a href="shop.html"><i class="fa fa-shopping-cart"></i></a></li>
+        <li class="sea"><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i></i></a></li>
+      </ul>
+  </div>
+  <p class="company_desc"> <i><b>Jolly Coffee</b></i> Outlets </h2><hr width="100px;">
+  <p class="company_desc_2"> Check out the franchises of Jolly Coffee that are available at <b>5</b> centres in and around Chennai. <br>
+    To all coffee-lovers around the world, come down to Chennai during the winter vacations and grab a warm mug of <i>Jolly Coffee</i> with your loved ones</h3>
+    <br><br>
+  <div id="map" style="width: 1200px; height: 600px; margin-left:60px;"></div>
+
+  <script type="text/javascript">
+    var locations = [
+      ['Porur Outlet', 13.0382, 80.1565, 4],
+      ['Anna Nagar Outlet', 13.0850, 80.2101, 5],
+      ['OMR Outlet', 12.626927, 80.1927, 3],
+      ['Sholinganallur Outlet', 12.9010,80.2279, 2],
+      ['Siruseri Outlet', 12.8352, 80.2011, 1]
+    ];
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 10,
+      center: new google.maps.LatLng(12.9127, 80.2707),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+    var infowindow = new google.maps.InfoWindow();
+
+    var marker, i;
+
+    for (i = 0; i < locations.length; i++) {
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+  </script>
+
+  <br><br><br><br><br><hr width="300px" style="color:black;">
+  <div class="company_desc_2" style="background-color:#cccccc;padding-top:20px">Follow <i><b>Jolly Coffee</b></i> on our social media to receive all updates<br><br>
+    <div>
+      <a href="https://www.facebook.com/jollybreakfast/" target='_blank'><i class="fa fa-facebook" aria-hidden="true" style="padding-right:25px;" title="Facebook"></i></a>
+      <a href="https://www.instagram.com/jollybreakfast/" target='_blank'><i class="fa fa-instagram" aria-hidden="true" style="padding-right:25px;" title="Instagram"></i></a>
+      <a href="https://twitter.com/jollybeancafe?lang=en" target='_blank'><i class="fa fa-twitter" aria-hidden="true" title="Twitter"></i></a><br><br>
+    </div>
+  </div>
+</body>
+</html>
